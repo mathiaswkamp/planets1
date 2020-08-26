@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace planets1
 {
+
     class Program
     {
         static void Main(string[] args)
         {
+
+            Menu menu = new Menu();
+
+            menu.printMenu();
+
             Planet Mercury = new Planet("Mercury", 0.330, 4879, 5427, 3.7, 1407.6, 4222.6, 57.9, 88.0, 47.4, 167, 0, "No");     // create a planet object of the class planet 
             Planet Venus = new Planet("Venus", 4.87, 12104, 5243, 8.9, -5832.5, 2802.0, 108.2, 224.7, 35.0, 464, 0, "No");      // create a planet object of the class planet 
             Planet Earth = new Planet("Earth", 5.97, 12756, 5514, 9.8, 23.9, 24.0, 149.6, 365.2, 29.8, 15, 1, "No");            // create a planet object of the class planet
@@ -23,51 +29,50 @@ namespace planets1
             List<Planet> Planets = new List<Planet>();                                                          // creates a list 
             Planets =  Planet.Planets;                                                                          // puts the planets into the list
 
-            Planets.RemoveAt(8);                                                                           // removes index 8 which is pluto
-            Planets.Add(Pluto);                                                                                 // adds pluto back to the list
+            
+           
+            //Planets.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));    //prints out the list of Planets
 
-            Planets.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));    //prints out the list of Planets
+            //int count = Planets.Count();                                                                        // creates an int that counts how many planets that are in the list
+            //Console.WriteLine($"There is : {count} Planets");
 
-            int count = Planets.Count();                                                                        // creates an int that counts how many planets that are in the list
-            Console.WriteLine($"There is : {count} Planets");
+            //Console.WriteLine("press any key to see list of planets with a Mean Temperature below 0");
+            //Console.ReadKey();
+            //Console.Clear();
 
-            Console.WriteLine("press any key to see list of planets with a Mean Temperature below 0");
-            Console.ReadKey();
-            Console.Clear();
+            //List<Planet> temperatureBelowZero = new List<Planet>();                                             // creates a new list 
 
-            List<Planet> temperatureBelowZero = new List<Planet>();                                             // creates a new list 
+            //temperatureBelowZero.Add(Mars);                                                                     // adds the following planets to it
+            //temperatureBelowZero.Add(Jupiter);
+            //temperatureBelowZero.Add(Saturn);
+            //temperatureBelowZero.Add(Uranus);
+            //temperatureBelowZero.Add(Neptune);
+            //temperatureBelowZero.Add(Pluto);
 
-            temperatureBelowZero.Add(Mars);                                                                     // adds the following planets to it
-            temperatureBelowZero.Add(Jupiter);
-            temperatureBelowZero.Add(Saturn);
-            temperatureBelowZero.Add(Uranus);
-            temperatureBelowZero.Add(Neptune);
-            temperatureBelowZero.Add(Pluto);
-
-            temperatureBelowZero.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));
-
-
-            Console.WriteLine("press any key to see list of planets with a diameter between 10000km and 50000km");
-            Console.ReadKey();
-            Console.Clear();
-            List<Planet> diameterBetween10kto50k = new List<Planet>();                                           // creates a new list
-            diameterBetween10kto50k.Add(Venus);                                                                  // add plantes to list
-            diameterBetween10kto50k.Add(Earth);
-
-            diameterBetween10kto50k.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));
+            //temperatureBelowZero.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));
 
 
-            Console.WriteLine("press any key to remove all planets from the list ");
-            Console.Clear();
-            Console.ReadKey();
+            //Console.WriteLine("press any key to see list of planets with a diameter between 10000km and 50000km");
+            //Console.ReadKey();
+            //Console.Clear();
+            //List<Planet> diameterBetween10kto50k = new List<Planet>();                                           // creates a new list
+            //diameterBetween10kto50k.Add(Venus);                                                                  // add plantes to list
+            //diameterBetween10kto50k.Add(Earth);
 
-            Planets.Clear();                                                                                     // clear all 3 lists of planets
-            temperatureBelowZero.Clear();
-            diameterBetween10kto50k.Clear();
+            //diameterBetween10kto50k.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));
 
-            Console.WriteLine("the 3 lists of planets has been cleared ");
 
-            diameterBetween10kto50k.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));   // this line is to check if the lists is cleared
+            //Console.WriteLine("press any key to remove all planets from the list ");
+            //Console.Clear();
+            //Console.ReadKey();
+
+            //Planets.Clear();                                                                                     // clear all 3 lists of planets
+            //temperatureBelowZero.Clear();
+            //diameterBetween10kto50k.Clear();
+
+            //Console.WriteLine("the 3 lists of planets has been cleared ");
+
+            //diameterBetween10kto50k.ForEach(o => Console.WriteLine($"{o.Name} : mass : {o.Mass}(1024kg) diameter : {o.Diameter}(km) dencity : {o.Dencity}(kg/m3) gravity {o.Gravity}(m/s2) rotation period :{o.RotationPeriod}hrs length of day : {o.LengthOfDay}hrs distance from sun : {o.DistanceFromSun}(106km) orbital period : {o.OrbitalPeriod}days orbital velocity : {o.OrbitalVelocity}(km/s) mean temperature : {o.MeanTemperature}celcius  number of moons : {o.NumberOfMoons} ring system : {o.RingSysytem}"));   // this line is to check if the lists is cleared
         }
     }
 }
