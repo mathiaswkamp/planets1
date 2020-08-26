@@ -4,26 +4,23 @@ namespace planets1
 {
     class Planet
     {
-        static List<Planet> planets = new List<Planet>();      //creates a static list of planet class
+        static List<Planet> planets = new List<Planet>();    
 
-
-        private string name;                                   //property of name
-
+        private string name;                               
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
 
-        private double mass;                                   //property of mass
-
+        private double mass;        
         public double Mass
         {
             get { return mass; }
             set { mass = value; }
         }
 
-        private double diameter;                              //property of diameter
+        private double diameter;                        
 
         public double Diameter
         {
@@ -31,15 +28,14 @@ namespace planets1
             set { diameter = value; }
         }
 
-        private double dencity;                               //property of dencity
-
+        private double dencity;                              
         public double Dencity
         {
             get { return dencity; }
             set { dencity = value; }
         }
 
-        private double gravity;                              // property of gravity
+        private double gravity;                             
 
         public double Gravity
         {
@@ -47,7 +43,7 @@ namespace planets1
             set { gravity = value; }
         }
 
-        private double rotationperiod;                      //property of rotation period
+        private double rotationperiod;                     
 
         public double RotationPeriod                        
         {
@@ -55,15 +51,14 @@ namespace planets1
             set { rotationperiod = value; }
         }
 
-        private double lengthOfDay;                         //property of length of day
-
+        private double lengthOfDay;                        
         public double LengthOfDay
         {
             get { return lengthOfDay; }
             set { lengthOfDay = value; }
         }
 
-        private double distanceFromSun;                     //property of distance from sun
+        private double distanceFromSun;                    
 
         public double DistanceFromSun
         {
@@ -71,15 +66,14 @@ namespace planets1
             set { distanceFromSun = value; }
         }
 
-        private double orbitalPeriod;                       //property orbital period
-
+        private double orbitalPeriod;                      
         public double OrbitalPeriod
         {
             get { return orbitalPeriod; }
             set { orbitalPeriod = value; }
         }
 
-        private double orbitalVelocity;                     //property of orbital velocity
+        private double orbitalVelocity;                     
 
         public double OrbitalVelocity
         {
@@ -89,13 +83,13 @@ namespace planets1
 
         private double meanTemperature;
 
-        public double MeanTemperature                       //property of mean temperature
+        public double MeanTemperature                     
         {
             get { return meanTemperature; }
             set { meanTemperature = value; }
         }
 
-        private double numberofMoons;                       // property of number of moons
+        private double numberofMoons;                      
 
         public double NumberOfMoons             
         {
@@ -103,18 +97,16 @@ namespace planets1
             set { numberofMoons = value; }
         }
 
-        private string ringSystem;                          // property of ring system
-
+        private string ringSystem;                        
         public string RingSysytem
         {
             get { return ringSystem; }
             set { ringSystem = value; }
         }
 
-        internal static List<Planet> Planets { get => planets; set => planets = value; } // internal static property of planets allows me to create a list
+        internal static List<Planet> Planets { get => planets; set => planets = value; } 
 
-
-        // here is my constructor taking all values with it upon creation of a planet item
+       
 
         public Planet(string name, double mass, double diameter, double dencity, double gravity, double rotationperiod, double lengthofday, double distancefromsun, double orbitalperiod, double orbitalvelocity, double meantemperature, double numberofmoons, string ringsystem)
         {
@@ -135,8 +127,5 @@ namespace planets1
             planets.Add(this);
 
         }
-
-
-        
     }
 }
