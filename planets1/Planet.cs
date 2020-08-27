@@ -4,7 +4,10 @@ namespace planets1
 {
     class Planet
     {
-        static List<Planet> planets = new List<Planet>();    
+        //static List<Planet> planets = new List<Planet>();    
+
+         public const int  MASS = 1;
+        public  const int DIAMETER = 2;
 
         private string name;                               
         public string Name
@@ -104,7 +107,7 @@ namespace planets1
             set { ringSystem = value; }
         }
 
-        internal static List<Planet> Planets { get => planets; set => planets = value; } 
+        //internal static List<Planet> Planets { get => planets; set => planets = value; } 
 
        
 
@@ -124,8 +127,22 @@ namespace planets1
             this.numberofMoons = numberofmoons;
             this.ringSystem = ringsystem;
 
-            planets.Add(this);
 
         }
+
+        public string toString()
+        {
+            return Name + "\n\t" + 
+                   mass + "\n\t" +
+                   diameter + "\n\t";
+        }
+
+        public static string toStringPlanetSearch()
+        {
+            return MASS +": mass\n" +
+                   DIAMETER+ ": diameter\n";
+        }
+
+        //todo public string toString
     }
 }
