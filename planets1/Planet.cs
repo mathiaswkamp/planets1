@@ -6,24 +6,38 @@ namespace planets1
     {
         //static List<Planet> planets = new List<Planet>();    
 
-         public const int  MASS = 1;
-        public  const int DIAMETER = 2;
 
-        private string name;                               
+        public const int MASS = 1;
+        public const int DIAMETER = 2;
+        public const int DENCITY = 3;
+        public const int GRAVITY = 4;
+        public const int ROTATIONPERIOD = 5;
+        public const int LENGTHOFDAY = 6;
+        public const int DISTANCEFROMSUN = 7;
+        public const int ORBITALPERIOD = 8;
+        public const int ORBITALVELOCITY = 9;
+        public const int MEANTEMPERATURE = 10;
+        public const int NUMBEROFMOONS = 11;
+        public const int RINGSYSTEM = 12;
+
+
+        private string name;
+
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
 
-        private double mass;        
+        private double mass;
+
         public double Mass
         {
             get { return mass; }
             set { mass = value; }
         }
 
-        private double diameter;                        
+        private double diameter;
 
         public double Diameter
         {
@@ -31,14 +45,15 @@ namespace planets1
             set { diameter = value; }
         }
 
-        private double dencity;                              
+        private double dencity;
+
         public double Dencity
         {
             get { return dencity; }
             set { dencity = value; }
         }
 
-        private double gravity;                             
+        private double gravity;
 
         public double Gravity
         {
@@ -46,22 +61,23 @@ namespace planets1
             set { gravity = value; }
         }
 
-        private double rotationperiod;                     
+        private double rotationperiod;
 
-        public double RotationPeriod                        
+        public double RotationPeriod
         {
             get { return rotationperiod; }
             set { rotationperiod = value; }
         }
 
-        private double lengthOfDay;                        
+        private double lengthOfDay;
+
         public double LengthOfDay
         {
             get { return lengthOfDay; }
             set { lengthOfDay = value; }
         }
 
-        private double distanceFromSun;                    
+        private double distanceFromSun;
 
         public double DistanceFromSun
         {
@@ -69,14 +85,15 @@ namespace planets1
             set { distanceFromSun = value; }
         }
 
-        private double orbitalPeriod;                      
+        private double orbitalPeriod;
+
         public double OrbitalPeriod
         {
             get { return orbitalPeriod; }
             set { orbitalPeriod = value; }
         }
 
-        private double orbitalVelocity;                     
+        private double orbitalVelocity;
 
         public double OrbitalVelocity
         {
@@ -86,21 +103,22 @@ namespace planets1
 
         private double meanTemperature;
 
-        public double MeanTemperature                     
+        public double MeanTemperature
         {
             get { return meanTemperature; }
             set { meanTemperature = value; }
         }
 
-        private double numberofMoons;                      
+        private double numberofMoons;
 
-        public double NumberOfMoons             
+        public double NumberOfMoons
         {
             get { return numberofMoons; }
             set { numberofMoons = value; }
         }
 
-        private string ringSystem;                        
+        private string ringSystem;
+
         public string RingSysytem
         {
             get { return ringSystem; }
@@ -109,9 +127,10 @@ namespace planets1
 
         //internal static List<Planet> Planets { get => planets; set => planets = value; } 
 
-       
 
-        public Planet(string name, double mass, double diameter, double dencity, double gravity, double rotationperiod, double lengthofday, double distancefromsun, double orbitalperiod, double orbitalvelocity, double meantemperature, double numberofmoons, string ringsystem)
+        public Planet(string name, double mass, double diameter, double dencity, double gravity, double rotationperiod,
+            double lengthofday, double distancefromsun, double orbitalperiod, double orbitalvelocity,
+            double meantemperature, double numberofmoons, string ringsystem)
         {
             this.name = name;
             this.mass = mass;
@@ -126,23 +145,39 @@ namespace planets1
             this.meanTemperature = meantemperature;
             this.numberofMoons = numberofmoons;
             this.ringSystem = ringsystem;
-
-
         }
 
         public string toString()
         {
-            return Name + "\n\t" + 
-                   mass + "\n\t" +
-                   diameter + "\n\t";
+            return Name + ", mass :" +
+                   mass + ", Diameter :" +
+                   diameter + ", Dencity :" +
+                   dencity + ", Gravity :" +
+                   gravity + ", Rotation Period :" +
+                   rotationperiod + ", Length of day :" +
+                   lengthOfDay + ", Distance from sun :" +
+                   distanceFromSun + ", Orbital period :" +
+                   orbitalPeriod + ", Orbital velocity :" +
+                   orbitalVelocity + ", Mean temperature :" +
+                   meanTemperature + ", Number of moons :" +
+                   numberofMoons + ", Ring system: " +
+                   ringSystem;
         }
 
         public static string toStringPlanetSearch()
         {
-            return MASS +": mass\n" +
-                   DIAMETER+ ": diameter\n";
+            return MASS + ": Mass\n" +
+                   DIAMETER + ": Diameter\n" +
+                   DENCITY + ": Dencity\n" +
+                   GRAVITY + ": Gravity\n" +
+                   ROTATIONPERIOD + ": Rotation period\n" +
+                   LENGTHOFDAY + ": Length of day\n" +
+                   DISTANCEFROMSUN + ": Distance from sun\n" +
+                   ORBITALPERIOD + ": Orbital period\n" +
+                   ORBITALVELOCITY + ": Orbital velocity\n" +
+                   MEANTEMPERATURE + ": Mean temperature \n" +
+                   NUMBEROFMOONS + ": Number of moons\n" +
+                   RINGSYSTEM + ": Ring system\n";
         }
-
-        //todo public string toString
     }
 }

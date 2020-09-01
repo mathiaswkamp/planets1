@@ -6,18 +6,16 @@ namespace planets1
 
 
     {
-        public void printMenu ()
+        public void printMenu()
         {
             System.Console.WriteLine("1. Show count of Planets");
             System.Console.WriteLine("2. Search for planets");
-            System.Console.WriteLine("3. ");
-            System.Console.WriteLine("4. Exit");
+            System.Console.WriteLine("3. exit");
         }
 
         public void printPlanetSearch()
         {
             Console.WriteLine(Planet.toStringPlanetSearch());
-
         }
 
         public void printPlanetSearchOptions()
